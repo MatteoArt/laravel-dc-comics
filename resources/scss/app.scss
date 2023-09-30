@@ -1,0 +1,149 @@
+//variabili e mixins
+$my_link: none;
+$color_primary: #0282F9;
+$color_secondary: #959595;
+
+@mixin space-position {
+    max-width: 1000px;
+    margin: auto;
+}
+
+@mixin my-ul-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin d-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin text-white {
+    text-transform: uppercase;
+    color: white;
+}
+
+@mixin pill {
+    display: inline-block;
+
+}
+
+//general
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+//header
+.upper-bar {
+    font-size: small;
+    background-color: $color_primary;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 10px 0;
+    padding-right: 100px;
+}
+.img-logo {
+    width: 100%;
+}
+.logo-container {
+    width: 80px;
+    padding: 10px 0;
+}
+.jumbotron {
+    height: 290px;
+    background-image: url('/public/images/jumbotron.jpg');
+    background-size: cover;
+}
+#current-series {
+    position: relative;
+}
+.btn-big {
+    @include pill;
+    @include text-white;
+    background-color: $color_primary;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 18px;
+    position: absolute;
+    left: 175px;
+    top: -20.5px;
+    cursor: pointer;
+  }
+  header {
+    @include d-flex;
+    @include space-position;
+    justify-content: space-between;
+}
+
+.nav-link {
+    @include my-ul-list;
+    gap: 20px;
+
+    li {
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+    }
+
+    .active-link {
+        border-bottom: 4px solid $color_primary;
+        color: $color_primary;
+
+        .link {
+            color: $color_primary;
+        }
+    }
+
+}
+.caret-down {
+    color: $color_primary;
+    font-size: 15px;
+    margin-left: 8px;
+  }
+  .link-list-item {
+    display: flex;
+    align-items: center;
+}
+.link {
+    text-decoration: $my_link;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+
+    &:visited {
+        color: black;
+    }
+}
+
+
+//footer
+
+.wrapper {
+    background-image: url("/public/images/footer-bg.jpg");
+}
+
+.bg-logo-img {
+    position: absolute;
+    height: 130%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#foot {
+    background-color: #303030;
+    padding: 20px 0;
+}

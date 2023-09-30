@@ -1,1 +1,1 @@
-<h1>Contenuto<h1>
+@extends('layouts.public')
