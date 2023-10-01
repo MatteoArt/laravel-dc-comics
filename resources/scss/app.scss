@@ -1,3 +1,5 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 //variabili e mixins
 $my_link: none;
 $color_primary: #0282F9;
@@ -40,6 +42,7 @@ $color_secondary: #959595;
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -55,21 +58,26 @@ body {
     padding: 10px 0;
     padding-right: 100px;
 }
+
 .img-logo {
     width: 100%;
 }
+
 .logo-container {
     width: 80px;
     padding: 10px 0;
 }
+
 .jumbotron {
     height: 290px;
     background-image: url('/public/images/jumbotron.jpg');
     background-size: cover;
 }
+
 #current-series {
     position: relative;
 }
+
 .btn-big {
     @include pill;
     @include text-white;
@@ -81,11 +89,13 @@ body {
     left: 175px;
     top: -20.5px;
     cursor: pointer;
-  }
-  header {
+}
+
+header {
     @include d-flex;
     @include space-position;
     justify-content: space-between;
+    max-width: 1150px;
 }
 
 .nav-link {
@@ -107,15 +117,18 @@ body {
     }
 
 }
+
 .caret-down {
     color: $color_primary;
     font-size: 15px;
     margin-left: 8px;
-  }
-  .link-list-item {
+}
+
+.link-list-item {
     display: flex;
     align-items: center;
 }
+
 .link {
     text-decoration: $my_link;
     text-transform: uppercase;
@@ -125,6 +138,28 @@ body {
 
     &:visited {
         color: black;
+    }
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+
+    input {
+        text-align: right;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 2px solid $color_primary;
+        padding: 5px;
+        outline: none;
+    }
+
+    button {
+        border: none;
+        border-bottom: 2px solid $color_primary;
+        background-color: white;
+        padding: 5px;
     }
 }
 
@@ -146,4 +181,99 @@ body {
 #foot {
     background-color: #303030;
     padding: 20px 0;
+}
+
+.container-menu-footer {
+    @include d-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container-ul {
+    @include d-flex-column;
+}
+
+.list-footer {
+    list-style-type: none;
+    padding: 0;
+    margin: 18px 0;
+
+    li {
+        color: $color_secondary;
+        font-size: small;
+        padding: 3px;
+
+        &:first-child {
+            @include text-white;
+            font-size: 18px;
+            padding: 12px 3px;
+        }
+    }
+}
+
+.paragraph {
+    flex-basis: 100%;
+    font-size: small;
+    color: $color_secondary;
+    padding-bottom: 20px;
+}
+
+.par {
+    color: $color_primary;
+    cursor: pointer;
+}
+
+section {
+    @include d-flex;
+    @include space-position;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px;
+}
+
+.foot-container {
+    @include space-position;
+    @include d-flex;
+    justify-content: space-between;
+}
+
+.icons {
+    @include d-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.list-icon {
+    @include my-ul-list;
+    gap: 10px;
+
+    li {
+        width: 25px;
+        cursor: pointer;
+    }
+}
+
+.img-icon {
+    width: 100%;
+}
+
+#follow {
+    color: $color_primary;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-foot {
+    @include pill;
+    @include text-white;
+    border: 2px solid $color_primary;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#dark-gray-bar {
+    background-color: #202020;
+    height: 100px;
 }

@@ -3,7 +3,7 @@
 @endphp
 
 <div class="upper-bar">
-        <span>DC POWER VISA</span>
+        <span>DC POWER&#8480; VISA&reg;</span>
         <span>ADDICTIONAL DC SITES &#9660;</span>
 </div>
 <header>
@@ -29,6 +29,10 @@
         @endforeach
 
     </ul>
+    <div class="input-group">
+        <input type="search" id="site-search" name="q" / placeholder="Search">
+        <button><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+    </div>
 </header>
 <div class="jumbotron"></div>
 <div id="current-series">
