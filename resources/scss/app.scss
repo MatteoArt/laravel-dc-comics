@@ -163,6 +163,133 @@ header {
     }
 }
 
+//main
+.card-container {
+    @include space-position;
+    @include d-flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+$a: 100%;
+$b: 10px;
+
+.card {
+    flex-basis: calc((#{$a} / 6) - (#{$b}) * 2);
+    margin: 0 10px;
+    max-width: 146.667px;
+
+    .desc {
+        @include text-white;
+        overflow-wrap: break-word;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+
+    .img-container {
+        height: 200px;
+        position: relative;
+
+        .overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &:hover {
+
+            .overlay {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.5);
+                @include text-white;
+                font-weight: 600;
+
+                span {
+
+                    &:first-child {
+                        font-size: 14px;
+                        margin-bottom: 6px;
+                    }
+
+                    &:last-child {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+main {
+    background-color: #1C1C1C;
+    padding: 65px 0 20px;
+}
+.title-link {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.row-btn {
+    text-align: center;
+}
+
+.btn {
+    @include pill;
+    @include text-white;
+    background-color: $color_primary;
+    padding: 10px 30px;
+    font-weight: 600;
+    margin-top: 50px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+div.my-section-blue {
+    @include d-flex;
+    justify-content: center;
+    background-color: $color_primary;
+    padding: 40px 0;
+    gap: 35px;
+
+    .my-icons-item {
+        @include d-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .my-icon-desc {
+        @include text-white;
+        font-size: 14px;
+    }
+
+    .my-icon-container {
+        width: 35px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
 
 //footer
 
@@ -276,4 +403,42 @@ section {
 #dark-gray-bar {
     background-color: #202020;
     height: 100px;
+}
+
+//comic 
+
+.comic-wrapper {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    gap: 20px;
+}
+.info {
+    flex-basis: 60%;
+    padding-top: 18px;
+
+    p {
+        font-size: 15px;
+        color: rgb(124, 124, 124);
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: #003357;
+        font-size: 22px;
+    }
+}
+.picture {
+    flex-basis: 40%;
+
+    img {
+        width: 100%;
+    }
+
+    .adv {
+        text-transform: uppercase;
+        text-align: right;
+        color: #695F6B;
+        font-size: small;
+    }
 }

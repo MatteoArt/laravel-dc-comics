@@ -35,6 +35,3 @@
     </div>
 </header>
 <div class="jumbotron"></div>
-<div id="current-series">
-    <span class="btn-big">current series</span>
-</div>
