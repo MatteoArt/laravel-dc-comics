@@ -1,6 +1,12 @@
 @extends('layouts.public')
 @section('content')
-    <div class="comic-blue"></div>
+    <div class="comic-blue">
+        <div class="show-img-container">
+            <img src="{{ $comic->path }}" alt="img-show">
+            <div id="type"> {{ $comic->type }} </div>
+            <div class="gallery">view gallery</div>
+        </div>
+    </div>
     <div class="comic-wrapper">
         <div class="info">
             <h2> {{ $comic->title }} </h2>

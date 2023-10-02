@@ -406,7 +406,49 @@ section {
 }
 
 //comic 
+.comic-blue {
+    background-color: $color_primary;
+    height: 80px;
+    margin-bottom: 40px;
+    position: relative;
 
+    .show-img-container {
+        width: 200px;
+        position: absolute;
+        left: 25%;
+        bottom: 20px;
+        border: 1px solid white;
+
+        img {
+            width: 100%;
+        }
+
+        .gallery {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: #00A9D9;
+            color: white;
+            padding: 3px;
+            font-size: 14px;
+        }
+
+        #type {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-transform: uppercase;
+            text-align: center;
+            background-color: #00A9D9;
+            color: white;
+            padding: 3px;
+            font-size: small;
+        }
+    }
+}
 .comic-wrapper {
     display: flex;
     max-width: 900px;
