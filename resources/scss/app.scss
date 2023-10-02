@@ -426,6 +426,7 @@ section {
         text-transform: uppercase;
         color: #003357;
         font-size: 22px;
+        padding-bottom: 15px;
     }
 }
 .picture {
@@ -441,4 +442,61 @@ section {
         color: #695F6B;
         font-size: small;
     }
+}
+.green-container {
+    background-color: #55BA59;
+    display: flex;
+    margin-bottom: 12px;
+
+    .price {
+        border: 1px solid #307634;
+        flex-basis: 60%;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+
+        div {
+            color: #BBFD9B;
+            font-weight: 600;
+        }
+
+        .prezzo {
+            color: white;
+        }
+    }
+
+    .check {
+        border: 1px solid #307634;
+        flex-basis: 40%;
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        padding: 15px 0;
+    }
+}
+
+//form page
+
+.form-insert {
+    margin: 30px auto;
+    padding: 15px;
+    border: 1px solid black;
+    width: 60%;
+
+    label {
+        width: 95px;
+        display: inline-block;
+    }
+
+    .label-form {
+        width: 80px;
+    }
+
+    #last-label {
+        margin-left: calc(154px - 144.017px);
+    }
+}
+
+.form-group {
+    padding: 8px;
 }

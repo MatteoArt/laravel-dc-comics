@@ -24,4 +24,31 @@ class ComicController extends Controller
             'comic' => $comic
         ]);
     }
+
+    public function create() {
+        return view('create');
+    }
+
+    public function store(Request $request) {
+        $data = $request->all();
+
+        $artists = explode(',',$data['artists']);
+        $writers = explode(',',$data['writers']);
+
+        $newComic = new Comic();
+
+        $newComic->title = $data['title'];
+        $newComic->description = $data['description'];
+        $newComic->path = $data['path'];
+        $newComic->price = floatval($data['price']);
+        $newComic->series = $data['series'];
+        $newComic->sale_date = $data['sale_date'];
+        $newComic->type = $data["type"];
+        $newComic->artists = json_encode($artists);
+        $newComic->writers = json_encode($writers);
+
+        $newComic->save();
+
+        return redirect()->route('home');
+    }
 }
