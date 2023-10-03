@@ -1,6 +1,8 @@
 @extends('layouts.public')
 
 @section('content')
+    <a class="indietro" style="margin: 20px 30px;" href="{{ route('home') }}">Home</a>
+    <h1 style="text-align: center;padding-top:15px">Aggiungi comic</h1>
     <form action="{{ route('comic.store') }}" method="POST" class="form-insert">
         @csrf
 

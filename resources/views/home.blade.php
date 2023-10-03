@@ -22,7 +22,7 @@
             @endforeach
         </div>
         <div class="row-btn">
-            <span class="btn">load more</span>
+            <a class="btn" href="{{ route('comic.create') }}">aggiungi comic</a>
         </div>
     </main>
     @include('partials.blueBar')

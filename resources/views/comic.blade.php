@@ -8,6 +8,7 @@
         </div>
     </div>
     <div class="buttons">
+        <a class="indietro" href="{{ route('home') }}">Indietro</a>
         <form action="{{ route('comic.destroy', $comic->id) }}" method="POST">
             @csrf
 
@@ -40,4 +41,5 @@
             </div>
         </div>
     </div>
+    @include('partials.infodiv')
 @endsection

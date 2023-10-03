@@ -1,6 +1,8 @@
 @extends('layouts.public')
 
 @section('content')
+    <a class="indietro" style="margin: 20px 30px;" href="{{ route('home') }}">Home</a>
+    <h1 style="text-align: center;padding-top:15px">Modifica comic</h1>
     <form action="{{ route('comic.update', $comic->id) }}" method="POST" class="form-insert">
         @csrf
 
@@ -41,11 +43,11 @@
         <div class="form-group">
             <label for="artists_id">Artisti: </label>
             <textarea id="artists_id" name="artists">
-                {{ implode(", ", json_decode($comic->artists))  }}              
+                {{ implode(', ', json_decode($comic->artists)) }}              
             </textarea>
             <label for="writers_id" class="label-form" id="last-label">Scrittori: </label>
             <textarea id="writers_id" name="writers">
-                {{ implode(", ", json_decode($comic->writers))  }}
+                {{ implode(', ', json_decode($comic->writers)) }}
             </textarea>
         </div>
         <div class="form-group">
