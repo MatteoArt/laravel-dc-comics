@@ -51,4 +51,36 @@ class ComicController extends Controller
 
         return redirect()->route('home');
     }
+
+
+    public function edit($id) {
+        $comic = Comic::find($id);
+
+        return view('edit', [
+            'comic' => $comic
+        ]);
+    }
+
+    public function update(Request $request ,$id) {
+        $comic = Comic::find($id);
+
+        $data = $request->all();
+
+        $artists = explode(',',$data['artists']);
+        $writers = explode(',',$data['writers']);
+
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->path = $data['path'];
+        $comic->price = floatval($data['price']);
+        $comic->series = $data['series'];
+        $comic->sale_date = $data['sale_date'];
+        $comic->type = $data["type"];
+        $comic->artists = json_encode($artists);
+        $comic->writers = json_encode($writers);
+
+        $comic->save();
+
+        return redirect()->route('comic', $comic->id);
+    }
 }
