@@ -542,3 +542,30 @@ section {
 .form-group {
     padding: 8px;
 }
+
+
+//buttons 
+.buttons {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+
+    .elimina {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px;
+        cursor: pointer;
+    }
+    .modifica {
+        background-color: #f0ad4e;
+        color: black;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        padding: 8px;
+        border-radius: 5px;
+        font-size: small;
+    }
+}

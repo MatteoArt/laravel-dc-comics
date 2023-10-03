@@ -26,3 +26,6 @@ Route::post('/', [ComicController::class, 'store'])->name('comic.store');
 //UPDATE
 Route::get('/comic/{id}/edit', [ComicController::class, 'edit'])->name('comic.edit');
 Route::put('/comic/{id}', [ComicController::class, 'update'])->name('comic.update');
+
+//DELETE
+Route::delete('/comic/{id}', [ComicController::class, 'destroy'])->name('comic.destroy');

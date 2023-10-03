@@ -7,6 +7,16 @@
             <div class="gallery">view gallery</div>
         </div>
     </div>
+    <div class="buttons">
+        <form action="{{ route('comic.destroy', $comic->id) }}" method="POST">
+            @csrf
+
+            @method('DELETE')
+
+            <input class="elimina" type="submit" value="Elimina">
+        </form>
+        <a class="modifica" href="{{ route('comic.edit', $comic->id) }}">Modifica</a>         
+    </div>
     <div class="comic-wrapper">
         <div class="info">
             <h2> {{ $comic->title }} </h2>
