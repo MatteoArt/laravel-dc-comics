@@ -48,6 +48,14 @@ body {
 }
 
 //header
+#header-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
 .upper-bar {
     font-size: small;
     background-color: $color_primary;
@@ -72,6 +80,7 @@ body {
     height: 290px;
     background-image: url('/public/images/jumbotron.jpg');
     background-size: cover;
+    margin-top: 141px;
 }
 
 #current-series {
@@ -93,9 +102,10 @@ body {
 
 header {
     @include d-flex;
-    @include space-position;
     justify-content: space-between;
-    max-width: 1150px;
+    width: 100%;
+    padding: 0 100px;
+    background-color: white;
 }
 
 .nav-link {
@@ -411,7 +421,6 @@ section {
 .comic-blue {
     background-color: $color_primary;
     height: 80px;
-    margin-bottom: 40px;
     position: relative;
 
     .show-img-container {
@@ -526,7 +535,7 @@ section {
 //form page
 
 .form-insert {
-    margin: 30px auto;
+    margin: 30px auto 0;
     padding: 15px;
     border: 1px solid black;
     width: 60%;
@@ -658,4 +667,12 @@ section {
             width: 100%;
         }
     }
+}
+#create, #update {
+    background-color: lightgray;
+    padding-bottom: 30px;
+}
+#show-content {
+    padding: 40px 0;
+    background-color: rgb(250, 250, 250);
 }
